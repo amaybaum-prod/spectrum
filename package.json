@@ -51,7 +51,7 @@
     "write-file-webpack-plugin": "^4.5.1"
   },
   "dependencies": {
-    "@cypress/browserify-preprocessor": "^1.1.2",
+    "@cypress/browserify-preprocessor": "^2.0.0",
     "@sendgrid/mail": "^6.3.1",
     "@tippy.js/react": "^2.1.1",
     "apollo-cache-inmemory": "^1.6.3",
