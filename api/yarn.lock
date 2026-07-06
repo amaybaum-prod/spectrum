@@ -1205,22 +1205,15 @@ apollo-local-query@^0.3.1:
   dependencies:
     debug "^2.6.9"
 
-apollo-server-cache-redis@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/apollo-server-cache-redis/-/apollo-server-cache-redis-0.3.1.tgz#207fea925df7ad237918a8ce6978499e444377c4"
-  integrity sha512-1Wgxu3oOnraox/0vQ2BVszPm20FdZDXEVu6yCoHNkT/zFOYMR/KjqufF7ddlttdSsaQsXqlu0127fWHvX6NDAA==
+apollo-server-cache-redis@^1.0.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/apollo-server-cache-redis/-/apollo-server-cache-redis-1.6.0.tgz#b5bc9f69f2ce0d30af3f432737d45163f40d6944"
+  integrity sha512-kP9vWf4IoqjXs4JcthQQeyJZ57c16W6yjs0ESlmzjGey/7xkoVFznIbUDAd4a12yJhhdkXMkxyQLNv0Axt4PvQ==
   dependencies:
-    apollo-server-caching "0.3.1"
-    apollo-server-env "2.2.0"
-    dataloader "^1.4.0"
-    redis "^2.8.0"
-
-apollo-server-caching@0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/apollo-server-caching/-/apollo-server-caching-0.3.1.tgz#63fcb2aaa176e1e101b36a8450e6b4c593d2767a"
-  integrity sha512-mfxzikYXbB/OoEms77AGYwRh7FF3Oim5v5XWAL+VL49FrkbZt5lopVa4bABi7Mz8Nt3Htl9EBJN8765s/yh8IA==
-  dependencies:
-    lru-cache "^5.0.0"
+    apollo-server-caching "^0.7.0"
+    apollo-server-env "^3.2.0"
+    dataloader "^2.0.0"
+    ioredis "^4.0.0"
 
 apollo-server-caching@0.4.0:
   version "0.4.0"
@@ -1235,6 +1228,13 @@ apollo-server-caching@0.4.0-alpha.0:
   integrity sha512-E8YfrUgw7xzI7lPxJ9DdLBKP6zVoGyn+h57liMMasmbdWqc8R7VixNzkskYivq83R5wGiIPjYP9iKuotJGmTaA==
   dependencies:
     lru-cache "^5.0.0"
+
+apollo-server-caching@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/apollo-server-caching/-/apollo-server-caching-0.7.0.tgz#e6d1e68e3bb571cba63a61f60b434fb771c6ff39"
+  integrity sha512-MsVCuf/2FxuTFVhGLK13B+TZH9tBd2qkyoXKKILIiGcZ5CDUEBO14vIV63aNkMkS1xxvK2U4wBcuuNj/VH2Mkw==
+  dependencies:
+    lru-cache "^6.0.0"
 
 apollo-server-core@2.5.0-alpha.0:
   version "2.5.0-alpha.0"
@@ -1262,14 +1262,6 @@ apollo-server-core@2.5.0-alpha.0:
     subscriptions-transport-ws "^0.9.11"
     ws "^6.0.0"
 
-apollo-server-env@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/apollo-server-env/-/apollo-server-env-2.2.0.tgz#5eec5dbf46581f663fd6692b2e05c7e8ae6d6034"
-  integrity sha512-wjJiI5nQWPBpNmpiLP389Ezpstp71szS6DHAeTgYLb/ulCw3CTuuA+0/E1bsThVWiQaDeHZE0sE3yI8q2zrYiA==
-  dependencies:
-    node-fetch "^2.1.2"
-    util.promisify "^1.0.0"
-
 apollo-server-env@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/apollo-server-env/-/apollo-server-env-2.3.0.tgz#f0bf4484a6cc331a8c13763ded56e91beb16ba17"
@@ -1284,6 +1276,14 @@ apollo-server-env@2.3.0-alpha.0:
   integrity sha512-ml35SHu3SGsbohpl23Hk7mFpEWPGR9hmalSJ0ek1mFLuWOn2oRqyU+FRGW+UOA1jOcxs8U+J3Al6RKIfR8Aasg==
   dependencies:
     node-fetch "^2.1.2"
+    util.promisify "^1.0.0"
+
+apollo-server-env@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/apollo-server-env/-/apollo-server-env-3.2.0.tgz#0572e307da4784c5d7633a0ade1f45e231da28e3"
+  integrity sha512-V+kO5e6vUo2JwqV1/Ng71ZE3J6x1hCOC+nID2/++bCYl0/fPY9iLChbBNSgN/uoFcjhgmBchOv+m4o0Nie/TFQ==
+  dependencies:
+    node-fetch "^2.6.1"
     util.promisify "^1.0.0"
 
 apollo-server-errors@2.2.1:
@@ -3276,6 +3276,11 @@ dataloader@^1.4.0:
   resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-1.4.0.tgz#bca11d867f5d3f1b9ed9f737bd15970c65dff5c8"
   integrity sha512-68s5jYdlvasItOJnCuI2Q9s4q98g0pCyL3HrcKJu8KNugUl8ahgmZYg38ysLTgQjjXX3H8CJLkAvWrclWfcalw==
 
+dataloader@^2.0.0:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-2.2.3.tgz#42d10b4913515f5b37c6acedcb4960d6ae1b1517"
+  integrity sha512-y2krtASINtPFS1rSDjacrFgn1dcUuoREVabwlOGOe4SdxenREqwjwjElAdwvbGM7kgZz9a3KVicWR7vcz8rnzA==
+
 date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
@@ -3552,11 +3557,6 @@ dotsplit.js@^1.0.3:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/dotsplit.js/-/dotsplit.js-1.1.0.tgz#25a239eabe922a91ffa5d2a172d6c9fb82451e02"
   integrity sha1-JaI56r6SKpH/pdKhctbJ+4JFHgI=
-
-double-ended-queue@^2.1.0-0:
-  version "2.1.0-0"
-  resolved "https://registry.yarnpkg.com/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz#103d3527fd31528f40188130c841efdd78264e5c"
-  integrity sha1-ED01J/0xUo9AGIEwyEHv3XgmTlw=
 
 draft-js-checkable-list-item@^2.0.5:
   version "2.0.6"
@@ -6539,6 +6539,13 @@ lru-cache@^5.0.0, lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lru-cache@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
+  integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
+  dependencies:
+    yallist "^4.0.0"
+
 macos-release@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/macos-release/-/macos-release-2.2.0.tgz#ab58d55dd4714f0a05ad4b0e90f4370fef5cdea8"
@@ -6939,6 +6946,13 @@ node-fetch@^2.1.1, node-fetch@^2.1.2, node-fetch@^2.2.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+
+node-fetch@^2.6.1:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
+  integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
+  dependencies:
+    whatwg-url "^5.0.0"
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -8207,7 +8221,7 @@ redis-errors@^1.0.0, redis-errors@^1.2.0:
   resolved "https://registry.yarnpkg.com/redis-errors/-/redis-errors-1.2.0.tgz#eb62d2adb15e4eaf4610c04afe1529384250abad"
   integrity sha1-62LSrbFeTq9GEMBK/hUpOEJQq60=
 
-redis-parser@^2.4.0, redis-parser@^2.6.0:
+redis-parser@^2.4.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/redis-parser/-/redis-parser-2.6.0.tgz#52ed09dacac108f1a631c07e9b69941e7a19504b"
   integrity sha1-Uu0J2srBCPGmMcB+m2mUHnoZUEs=
@@ -8225,15 +8239,6 @@ redis-tag-cache@^1.2.1:
   integrity sha512-0F+rLtoIkz4NOWGt9k3qaPcbpvr6+wcEC9aWV78newMKTRN/nIYHgvfyO1Q0ySEepiEYbqj9DhjvQ4CUAtT9/g==
   dependencies:
     ioredis "^4.0.0"
-
-redis@^2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/redis/-/redis-2.8.0.tgz#202288e3f58c49f6079d97af7a10e1303ae14b02"
-  integrity sha512-M1OkonEQwtRmZv4tEWF2VgpG0JWJ8Fv1PhlgT5+B+uNq2cA3Rt1Yt/ryoR+vQNOQcIEgdCdfH0jr3bDpihAw1A==
-  dependencies:
-    double-ended-queue "^2.1.0-0"
-    redis-commands "^1.2.0"
-    redis-parser "^2.6.0"
 
 redraft@0.8.0:
   version "0.8.0"
@@ -10058,6 +10063,14 @@ whatwg-url@^4.3.0:
     tr46 "~0.0.3"
     webidl-conversions "^3.0.0"
 
+whatwg-url@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
+  integrity sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==
+  dependencies:
+    tr46 "~0.0.3"
+    webidl-conversions "^3.0.0"
+
 which-module@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
@@ -10226,6 +10239,11 @@ yallist@^3.0.0, yallist@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
   integrity sha512-S+Zk8DEWE6oKpV+vI3qWkaK+jSbIK86pCwe2IF/xwIpQ8jEuxpw9NyaGjmp9+BoJv5FV2piqCDcoCtStppiq2A==
+
+yallist@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
+  integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
 yargs-parser@^11.1.1:
   version "11.1.1"
